@@ -17,15 +17,12 @@ const Share = () => {
         <div className="modal">
           <div onClick={toggleWindow} className="overlay">
             <div className="details">
-              {/* <button onClick={toggleWindow} className="close-btn">
-                close
-              </button> */}
               <i
                 onClick={toggleWindow}
                 className="fa-regular fa-circle-xmark"
               ></i>
               <img className="qrcode" src="./images/qr-code.png" alt="" />
-              <h3>Scan To Go AirCampus</h3>
+              <h3 className="whatsapp-text">Scan Whatsapp-Web</h3>
             </div>
           </div>
         </div>

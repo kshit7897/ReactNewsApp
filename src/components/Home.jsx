@@ -26,6 +26,18 @@ const Home = () => {
     FetchApiData(Apiurl);
   }, []);
 
+  const removeArtical = (id) => {
+    // alert(urlToImage);
+    let newArr = [];
+    data.filter((item, index) => {
+      if (id !== index) {
+        newArr.push(item);
+      }
+      console.log(newArr);
+    });
+    setData(newArr);
+  };
+
   return (
     <>
       <div className="input">
@@ -62,6 +74,12 @@ const Home = () => {
                     <Like />
                     <Share />
                     <Comments />
+                    <h3>
+                      <i
+                        onClick={() => removeArtical(index)}
+                        class="fa-solid fa-trash"
+                      ></i>
+                    </h3>
                   </div>
                 </div>
               </div>
@@ -74,15 +92,12 @@ const Home = () => {
 
 export default Home;
 
-// <div className="container">
-//   {data.map((item, index) => {
-//     return (
-// <div className="childcon" key={index}>
-//   <div className="dispalyhead">
-//     <h3 className="display-htext">{item.title}</h3>
-//   </div>
-//   <img className="displayImg" src={item.urlToImage} alt="" />
-// </div>
-//     );
-//   })}
-// </div>
+// const handleDelete = (id) => {
+//   let newArr = [];
+//   searchedNewsData.filter((item, index) => {
+//     if (id != index) {
+//       newArr.push(item);
+//     }
+//   });
+//   setSearchedNewsData(newArr);
+// };

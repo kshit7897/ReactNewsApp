@@ -3,7 +3,7 @@ import React from "react";
 const Comments = () => {
   return (
     <div>
-      <h3>comment</h3>
+      <input className="inputfield" type="text" placeholder="Comment Here..." />
     </div>
   );
 };

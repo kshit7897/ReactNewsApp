@@ -73,13 +73,13 @@ a {
   /* border: 2px solid yellow; */
   display: grid;
   grid-gap: 30px;
-  width: 95%;
-  margin: 30px auto;
+  width: 100%;
+  margin: 20px 20px;
   grid-template-columns: repeat(auto-fit, minmax(47%, 1fr));
 }
 .diaplay-img-div {
   text-align: center;
-  height: 350px;
+  height: 300px;
 }
 .displayImg {
   max-width: 80%;
@@ -123,7 +123,8 @@ a {
   padding: 8px;
   border-top: 1px solid grey;
   display: grid;
-  grid-template-columns: 60px 60px 60px auto 60px;
+  grid-template-columns: 65px 65px 40px auto 40px;
+  /* grid-template-columns: 70px 70px 50px 200px 50px; */
 }
 .share-text {
   color: black;
@@ -156,6 +157,8 @@ a {
   min-width: 300px;
   /* text-align: center; */
   border-radius: 8px;
+  min-height: 300px;
+  max-height: 400px;
 }
 .qrcode {
   margin-top: 5px;
@@ -167,4 +170,26 @@ a {
   right: 10px;
   font-size: larger;
   cursor: pointer;
+}
+/* .like-icon {
+  color: skyblue;
+}
+.whatsapp-text {
+  color: rgb(8, 85, 8);
+}
+.likes-clicker {
+  color: green;
+}
+.Dislikes-clicker {
+  color: red;
+}
+.fa-share-from-square {
+  color: blue;
+} */
+
+.inputfield {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+  font-size: medium;
 }

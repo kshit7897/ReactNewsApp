@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FcLike, FcDislike } from "react-icons/fc";
 
 const Like = () => {
   const [Like, setLike] = useState(0);
@@ -15,12 +16,14 @@ const Like = () => {
     <>
       <div className="like-div">
         <h3 className="likes-clicker" onClick={handleLike}>
-          😍{Like}
+          <FcLike className="like-icon" />
+          {Like}
         </h3>
       </div>
       <div className="like-div">
-        <h3 className="likes-clicker" onClick={handleDislike}>
-          😡{dislike}
+        <h3 className="Dislikes-clicker" onClick={handleDislike}>
+          <FcDislike />
+          {dislike}
         </h3>
       </div>
     </>
