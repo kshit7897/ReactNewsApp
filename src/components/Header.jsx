@@ -31,8 +31,9 @@ const Header = () => {
             <NavLink to="/About">About</NavLink>
           </li>
           <NavLink to="/ContectUs">ContectUs</NavLink>
-          <li></li>
-          <i className="fa-regular fa-circle-user"></i>
+          <li>
+            <i className="fa-regular fa-circle-user"></i>
+          </li>
         </ul>
       </header>
 

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Like from "./Like";
+import Comments from "./Comments";
+import Share from "./Share";
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
@@ -49,7 +52,17 @@ const Home = () => {
                   <div className="dispalyhead">
                     <h3 className="display-htext">{item.title}</h3>
                   </div>
-                  <img className="displayImg" src={item.urlToImage} alt="" />
+                  <div className="diaplay-img-div">
+                    <img className="displayImg" src={item.urlToImage} alt="" />
+                    <div className="display-para-div">
+                      <p className="display-para">{item.description}</p>
+                    </div>
+                  </div>
+                  <div className="like-hit">
+                    <Like />
+                    <Share />
+                    <Comments />
+                  </div>
                 </div>
               </div>
             ))
