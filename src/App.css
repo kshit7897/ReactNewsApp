@@ -171,21 +171,12 @@ a {
   font-size: larger;
   cursor: pointer;
 }
-/* .like-icon {
-  color: skyblue;
-}
 .whatsapp-text {
   color: rgb(8, 85, 8);
 }
-.likes-clicker {
-  color: green;
-}
-.Dislikes-clicker {
-  color: red;
-}
 .fa-share-from-square {
   color: blue;
-} */
+}
 
 .inputfield {
   border: none;

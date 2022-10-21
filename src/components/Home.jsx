@@ -26,16 +26,22 @@ const Home = () => {
     FetchApiData(Apiurl);
   }, []);
 
-  const removeArtical = (id) => {
-    // alert(urlToImage);
-    let newArr = [];
-    data.filter((item, index) => {
-      if (id !== index) {
-        newArr.push(item);
-      }
-      console.log(newArr);
-    });
-    setData(newArr);
+  // const removeArtical = (id) => {
+  //   // alert(urlToImage);
+  //   let newArr = [];
+  //   data.filter((item, index) => {
+  //     if (id !== index) {
+  //       newArr.push(item);
+  //     }
+  //     console.log(newArr);
+  //   });
+  //   setData(newArr);
+  // };
+
+  const deleteArtical = (url) => {
+    let removeData = data.filter((item) => item.url !== url);
+    console.log(removeData);
+    setData(removeData);
   };
 
   return (
@@ -58,8 +64,8 @@ const Home = () => {
               }
             })
 
-            .map((item, index) => (
-              <div className="container" key={index}>
+            .map((item) => (
+              <div className="container" key={item.url}>
                 <div className="childcon">
                   <div className="dispalyhead">
                     <h3 className="display-htext">{item.title}</h3>
@@ -76,7 +82,7 @@ const Home = () => {
                     <Comments />
                     <h3>
                       <i
-                        onClick={() => removeArtical(index)}
+                        onClick={() => deleteArtical(item.url)}
                         class="fa-solid fa-trash"
                       ></i>
                     </h3>
